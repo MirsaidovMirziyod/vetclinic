@@ -1,0 +1,159 @@
+@use "../fonts";
+@use "../mixins";
+@use "../variables";
+
+.nav {
+  position: fixed;
+  width: 1440px;
+  top: 0px 0px 0px 0px;
+  box-shadow: 0px 10px 10px 0px rgb(0 0 0 / 5%);
+  background-color: variables.$bg-color;
+  z-index: 10;
+  height: 100px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  &__img {
+    display: flex;
+    justify-content: end;
+    width: 242px;
+    height: 100%;
+  }
+  &__half1 {
+    display: flex;
+    width: 1440px;
+    height: 39%;
+  }
+  &__half2 {
+    display: flex;
+    width: 1440px;
+    height: 61%;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 241px;
+    height: 100%;
+    &--item {
+      list-style: none;
+    }
+  }
+}
+.shedule__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 275px;
+  height: 100%;
+  &--item {
+    list-style: none;
+
+    span {
+      font-weight: bold;
+    }
+    &--item:first-child {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.tel__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 100%;
+  list-style: none;
+  &--item:first-child {
+    list-style: none;
+  }
+  &--item:nth-child(3):before {
+    content: "\2022";
+    font-weight: bold;
+    display: inline-block;
+    width: 4px;
+    margin-left: 1px;
+    color: #ffbd54;
+  }
+  &--item {
+    padding: 0 22px;
+    &:hover a {
+      color: variables.$secondary-yellow;
+    }
+    &:active a {
+      color: variables.$title-black;
+      opacity: 0.6;
+    }
+  }
+  &--item:last-child:before {
+    content: "\2022";
+    font-weight: bold;
+    display: inline-block;
+    width: 4px;
+    margin-left: -1em;
+    color: #ffbd54;
+  }
+}
+.shedule__list--item,
+.nav__list--item {
+  @include mixins.tel();
+}
+
+.tel__list--item {
+  a {
+    @include mixins.tel();
+    text-decoration: none;
+  }
+
+  &:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+.nav__bar {
+  display: flex;
+  align-items: center;
+  width: 800px;
+  height: 100%;
+  &--fish {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+
+  &--item {
+    list-style: none;
+    padding: 0 55px 0 0;
+
+    &:nth-child(2) {
+      padding: 0 55px 0 0;
+    }
+  }
+}
+.nav__question {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  height: 100%;
+  &--item {
+    list-style: none;
+  }
+}
+
+.nav__img {
+  position: relative;
+  top: 20px;
+}
+.img {
+  position: absolute;
+}

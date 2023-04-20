@@ -1,0 +1,242 @@
+@use "../fonts";
+@use "../mixins";
+@use "../variables";
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 400px;
+  background-image: url(../image/k.png);
+  background-repeat: no-repeat;
+  background-position: 21% 22%;
+  .ct {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../image/k.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    width: 60%;
+    height: 60%;
+  }
+  &__pretitle {
+    text-align: center;
+    width: 630px;
+    @include mixins.pretitle();
+    padding: 0 0 70px 0;
+  }
+  &__title {
+    @include mixins.author;
+  }
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 800px;
+
+  &__cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 215px;
+    gap: 13px;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid #f3f3f3;
+    border-radius: 5px;
+    width: 193px;
+    height: 200px;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:active {
+      opacity: 0.6;
+    }
+    &--item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 50%;
+      list-style: none;
+    }
+    &--item:first-child {
+      height: 50%;
+      align-items: end;
+    }
+
+    &--title {
+      @include mixins.cardtitle();
+      width: 100px;
+      text-align: center;
+    }
+  }
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+
+    &--title {
+      @include mixins.title();
+      font-size: 48px;
+      line-height: 54px;
+    }
+  }
+}
+// ....
+// ....
+// ....
+// ....
+// ....
+// ....
+// ....
+// ....
+.main__look {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+
+  .ct {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    height: 100%;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 0px 5px 5px 5px;
+    border: 1px solid #f3f3f3;
+  }
+  &--ank {
+    background: #ffbd54;
+    border-radius: 3px;
+    text-decoration: none;
+  }
+  &--btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: #ffbd54;
+    border: none;
+    font-family: "Futura PT";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #ffffff;
+    width: 180px;
+    height: 50px;
+  }
+  &--btn:hover {
+    background: #333333;
+    border-radius: 3px;
+    font-family: "Futura PT";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #ffbd54;
+  }
+
+  &--btn:active {
+    opacity: 0.6;
+  }
+  &--ank1 {
+    background: variables.$title-black;
+    border-radius: 3px;
+    text-decoration: none;
+  }
+  &--btn1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: variables.$title-black;
+    border: none;
+    font-family: variables.$font-all;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #ffffff;
+    width: 241px;
+    height: 50px;
+  }
+  &--btn1:hover {
+      background: variables.$secondary-yellow;
+      border-radius: 3px;
+      border: 2px solid variables.$secondary-yellow;
+      color: variables.$title-black;
+    }
+    &--btn1:active {
+      // @include mixins.btn();
+      // background: variables.$secondary-yellow;
+      opacity: 0.6;
+    }
+    
+  &--title {
+    font-family: variables.$font-all;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: variables.$title-black;
+  }
+  &--pretitle {
+    font-family: variables.$font-all;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    width: 500px;
+    line-height: 20px;
+    color: variables.$pretitle-grey;
+  }
+  &__text .ct .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+  }
+  &--text {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 50%;
+    height: 100%;
+  }
+  .cont {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+    height: 60%;
+  }
+  &--img {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+}

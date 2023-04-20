@@ -1,0 +1,64 @@
+@use "./variables";
+
+@mixin title {
+  font-family: variables.$font-all;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 64px;
+  color: variables.$title-black;
+}
+
+@mixin author {
+  text-align: center;
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  color: #333333;
+}
+@mixin span {
+  color: variables.$title-blue;
+}
+
+@mixin pretitle {
+  font-family: variables.$font-all;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: variables.$pretitle-grey;
+}
+
+@mixin tel {
+  font-family: variables.$font-all;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: variables.$title-black;
+}
+@mixin btn {
+  font-family: variables.$font-all;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: variables.$main-color;
+  background: variables.$title-black;
+  border-radius: 3px;
+  width: 181px;
+  height: 50px;
+}
+@mixin cardtitle {
+  font-family: variables.$font-all;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: variables.$title-black;
+}

@@ -1,0 +1,77 @@
+@use "../fonts";
+@use "../mixins";
+@use "../variables";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 1440px;
+  height: 800px;
+  background-image: url(../../image/img.png);
+  background-repeat: no-repeat;
+  background-size: 1440px 841px;
+  overflow: hidden;
+
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 50%;
+    height: 100%;
+  }
+
+  &__pets {
+    width: 100%;
+    height: 100%;
+  }
+  &__title {
+    @include mixins.title();
+    width: 600px;
+    padding: 0 0 29px 0;
+    span {
+      color: variables.$title-blue;
+    }
+  }
+  &__pretitle {
+    @include mixins.pretitle();
+    width: 500px;
+    padding: 0 0 53px 0;
+  }
+
+  
+
+  &__btn:hover {
+    background: variables.$secondary-yellow;
+    border-radius: 3px;
+    border: 2px solid variables.$secondary-yellow;
+    color: variables.$title-black;
+  }
+  &__btn {
+    cursor: pointer;
+    width: 181px;
+    height: 50px;
+    padding: 10px 0 10px 0;
+    background: variables.$title-black;
+    @include mixins.btn();
+    text-decoration: none;
+
+  }
+
+  
+
+  &__btn:active {
+    @include mixins.btn();
+    background: variables.$secondary-yellow;
+    color: variables.$title-black;
+    opacity: 0.6;
+  }
+}
+.ct {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  width: 100%;
+  height: 40%;
+}
